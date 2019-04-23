@@ -1,0 +1,5 @@
+#List of essential packages that I need
+python-neovim #automatically installs neovim
+git
+xclip
+tmux
