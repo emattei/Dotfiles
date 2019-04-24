@@ -10,6 +10,7 @@ if dein#load_state('~/.local/share/dein')
 
   call dein#add('~/.local/share/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('Shougo/deoplete.nvim')
+  call dein#add('airblade/vim-gitgutter')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
@@ -27,6 +28,8 @@ call dein#add('scrooloose/nerdtree',
 call dein#add('justmao945/vim-clang',
       \{'on_ft': ['c', 'cpp']})
 
+call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
 
 
 
@@ -44,10 +47,20 @@ set softtabstop=4           " see multiple spaces as tabstops so <BS> does the r
 set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
-set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
 set cc=80                   " set an 80 column border for good coding style
+
+set number relativenumber   " add line numbers
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
+
+" color scheme
 color dracula
+" Be sure the colors are working
+"set -g default-terminal "xterm-256color"
 
 " Run python script using F9
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
@@ -61,3 +74,16 @@ let g:mapleader = ','
 " Toggle spelling
 nnoremap <leader>s : set invspell<CR>
 
+set scrolloff=3 " keep three lines between the cursor and the edge of the screen
+
+" undos configuration
+set undodir=~/.vim/undodir
+set undofile  " save undos
+set undolevels=10000  " maximum number of changes that can be undone
+set undoreload=100000  " maximum number lines to save for undo on a buffer reload
+
+" easy split movement
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
