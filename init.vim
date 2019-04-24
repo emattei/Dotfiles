@@ -60,7 +60,7 @@ set number relativenumber   " add line numbers
 " color scheme
 color dracula
 " Be sure the colors are working
-"set -g default-terminal "xterm-256color"
+"let g:default-terminal "xterm-256color"
 
 " Run python script using F9
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
