@@ -1,6 +1,4 @@
-if &compatible
-  set nocompatible " Disable compatibility to old-time vi
-endif
+set nocompatible " Disable compatibility to old-time vi
 
 " Add the dein installation directory into runtimepath
 set runtimepath+=~/.local/share/dein/repos/github.com/Shougo/dein.vim
@@ -11,6 +9,13 @@ if dein#load_state('~/.local/share/dein')
   call dein#add('~/.local/share/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('airblade/vim-gitgutter')
+  call dein#add('scrooloose/nerdtree',
+      \{'on_cmd': 'NERDTreeToggle'})
+  call dein#add('justmao945/vim-clang',
+      \{'on_ft': ['c', 'cpp']})
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
@@ -22,15 +27,8 @@ endif
 "------------------------------------------------------------------------------
 ""Plugin install packages
 "------------------------------------------------------------------------------
-call dein#add('scrooloose/nerdtree',
-      \{'on_cmd': 'NERDTreeToggle'})
 
-call dein#add('justmao945/vim-clang',
-      \{'on_ft': ['c', 'cpp']})
-
-call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
-
+"let g:gitgutter_override_sign_column_highlight = 0
 " vim-airline
 let g:airline_theme = 'powerlineish'
 let g:airline#extensions#syntastic#enabled = 1
@@ -42,8 +40,11 @@ let g:airline_skip_empty_sections = 1
 
 
 filetype plugin indent on
-syntax enable
 
+syntax enable
+color seoul256
+set termguicolors
+set background=dark
 set showmatch               " Show matching brackets.
 set ignorecase              " Do case insensitive matching
 set mouse=v                 " middle-click paste with mouse
@@ -63,8 +64,6 @@ set number relativenumber   " add line numbers
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
-" color scheme
-color dracula
 " Be sure the colors are working
 "let g:default-terminal "xterm-256color"
 
