@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+#TODO add the possibility to exclude folders
+
 # Given a Folder in input return:
 # Number of files
 # Number of sub-folders
