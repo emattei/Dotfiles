@@ -6,7 +6,7 @@
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dir_colors && eval "$(dircolors -b ~/.dir_colors)" || eval "$(dircolors -b)"
 
-    alias ls='ls -h --group-directories-first --color=always'
+    alias ls='ls -Ah --group-directories-first --color=always'
     alias dir='dir --color=always'
     alias vdir='vdir --color=always'
 

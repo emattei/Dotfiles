@@ -107,4 +107,5 @@ export EDITOR='nvim' # Make nvim the default
 export VISUAL='nvim' # system editor
 
 export XDG_CACHE_HOME=${HOME}/.cache
+export XDG_CONFIG_HOME=${HOME}/.config
 

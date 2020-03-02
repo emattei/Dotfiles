@@ -21,5 +21,3 @@ let g:neosolarized_italic = 0
 set background=dark
 
 colorscheme NeoSolarized
-
-
