@@ -33,6 +33,28 @@ if dein#load_state('~/.local/share/dein')
     call dein#add('airblade/vim-gitgutter')
   " Comment multiple lines
     call dein#add('scrooloose/nerdcommenter')
+  " Modify multiple lines at the same time
+    call dein#add('terryma/vim-multiple-cursors', {
+                \ 'on_map' : { 'n' : ['<C-n>', '<C-p>'], 'x' : '<C-n>'}})
+  " Align text in columns
+    call dein#add('godlygeek/tabular', {
+                \'on_cmd' : [ 'Tab', 'Tabularize' ] , 'augroup' : 'tabular' })
+  " Swap two words or two line in one motion
+    call dein#add('tommcdo/vim-exchange', {
+                \'on_map' : {'n' : 'cx', 'x' : 'X' }})
+  " Repeat command. It is a dependency of the vim-surround plugin
+    call dein#add('tpope/vim-repeat', {
+                \'on_map' : '.'}) 
+  " Add, remove or change parenthesis
+    call dein#add('tpope/vim-surround', {
+                \'on_map': {'n' : ['cs', 'ds', 'ys'], 'x' : 'S'},
+                \'depends' : 'vim-repeat'})
+  " Move chunks of text around
+    call dein#add('zirrostig/vim-schlepp', {
+                \'on_map' :  ['<Plug>SchleppIndentDown',
+                \             '<Plug>SchleppIndentUp',
+                \             '<Plug>SchleppLeft', 
+                \             '<Plug>SchleppRight']}) 
 
   " Show preview for markdown files
     call dein#add('iamcco/markdown-preview.nvim', {
@@ -60,6 +82,10 @@ so ~/.config/nvim/neosolarized_profile.vim
 so ~/.config/nvim/airline_profile.vim
 " Load INDENTLINE configuration
 so ~/.config/nvim/indentLine_profile.vim
+" Load TABULARIZE configuration
+so ~/.config/nvim/tabularize_profile.vim
+" Load SCHLEPP configuration
+so ~/.config/nvim/schlepp_profile.vim
 
 " Required:
 filetype plugin indent on
@@ -116,3 +142,6 @@ set list
 set listchars=tab:▸\ ,trail:·,eol:¬,extends:→,precedes:←,nbsp:･
 set showbreak=↪\
 
+" Remap to move across buffers
+noremap <M-N> :bnext<CR>
+noremap <M-P> :bprev<CR>
