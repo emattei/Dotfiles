@@ -18,3 +18,11 @@ sh ./installer.sh ~/.local/share/dein
 
 # Clean-up
 rm ./installer.sh
+
+# Required for:
+# code completion: jedi
+# code linting: flake8
+# code formatting: autopep8
+pip3 install --user jedi flake8 autopep8
+
+bash ./yarn_installer.sh
