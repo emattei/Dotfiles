@@ -24,6 +24,8 @@ if dein#load_state('~/.local/share/dein')
     call dein#add('vim-airline/vim-airline-themes')
   " Show the buffers in vim
     call dein#add('bling/vim-bufferline')
+  " Add support for tmux
+    call dein#add('edkolev/tmuxline.vim')
   " Show indent lines
     call dein#add('Yggdroot/indentLine')
   " View csv in vim

@@ -15,6 +15,19 @@ let g:airline_skip_empty_sections = 1
 " Enable paste detaction
 let g:airline_detect_paste = 1
 
+" Apply colors to tmux as well
+let g:airline#extensions#tmuxline#enabled = 1
+let g:tmuxline_powerline_separators = 1
+" Configure tmux statusline
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'c'    : ['#(whoami)'],
+      \'win'  : ['#I', '#W'],
+      \'cwin' : ['#I', '#W'],
+      \'x'    : '#(date)',
+      \'y'    : ['%R', '%a', '%Y'],
+      \'z'    : '#H'}
+
 " Tabline configuration
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
