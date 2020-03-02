@@ -31,6 +31,8 @@ if dein#load_state('~/.local/share/dein')
                 \ 'on_ft' : ['csv', 'tsv']})
   " View git information
     call dein#add('airblade/vim-gitgutter')
+  " Comment multiple lines
+    call dein#add('scrooloose/nerdcommenter')
 
   " Show preview for markdown files
     call dein#add('iamcco/markdown-preview.nvim', {
