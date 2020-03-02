@@ -16,6 +16,7 @@ if dein#load_state('~/.local/share/dein')
   " Let dein manage dein
   " Required:
   call dein#add('~/.local/share/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('iCyMind/NeoSolarized')
 
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
@@ -39,6 +40,8 @@ endif
 
 " Load configuration for markdown
 so ~/.config/nvim/markdown_profile.vim
+" Load configuration for NeoSolarized
+so ~/.config/nvim/neosolarized_profile.vim
 
 " Required:
 filetype plugin indent on
@@ -47,9 +50,11 @@ syntax enable
 " No tabs, use 4 spaces instead:
 set tabstop=4
 set shiftwidth=4
+
 set expandtab
 set smarttab
 
 let g:indentLine_color_term = 239
 let g:indentLine_char = '┊'
 
+set termguicolors

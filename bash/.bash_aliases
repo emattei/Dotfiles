@@ -6,7 +6,7 @@
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dir_colors && eval "$(dircolors -b ~/.dir_colors)" || eval "$(dircolors -b)"
 
-    alias ls='ls -h --color=always'
+    alias ls='ls -h --group-directories-first --color=always'
     alias dir='dir --color=always'
     alias vdir='vdir --color=always'
 
@@ -15,9 +15,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=always'
 fi
 
-alias ll='ls -AhlF'
-alias la='ls -Ah'
-alias l='ls -CF'
+alias ll='ls -AhlF --group-directories-first'
+alias la='ls -Ah --group-directories-first'
+alias l='ls -CF --group-directories-first'
 
 # call neovim with just 'v'
 alias v='nvim'
