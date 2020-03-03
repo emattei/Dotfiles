@@ -1,3 +1,6 @@
+#!/bin/bash
+
+# Test if the console is display correctly the colors
 
 awk 'BEGIN{
     s="/\\/\\/\\/\\/\\"; s=s s s s s s s s s s s s s s s s s s s s s s s;

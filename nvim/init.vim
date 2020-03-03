@@ -53,8 +53,8 @@ if dein#load_state('~/.local/share/dein')
                 \'depends' : 'vim-repeat'})
   " Move chunks of text around
     call dein#add('zirrostig/vim-schlepp', {
-                \'on_map' :  ['<Plug>SchleppIndentDown',
-                \             '<Plug>SchleppIndentUp',
+                \'on_map' :  ['<Plug>SchleppDown',
+                \             '<Plug>SchleppUp',
                 \             '<Plug>SchleppLeft', 
                 \             '<Plug>SchleppRight']}) 
 

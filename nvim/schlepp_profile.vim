@@ -12,4 +12,4 @@ let g:Schlepp#allowSquishingBlock = 1
 let g:Schlepp#trimWS = 0
 
 " To move and automatically reindent
-vmap <unique> i <Plug>SchleppToggleReindent
+vmap <unique> z <Plug>SchleppToggleReindent
