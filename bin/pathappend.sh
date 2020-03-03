@@ -1,0 +1,9 @@
+#!/bin/bash
+
+pathappend() {
+    for ARG in "$@"; do
+        if [ -d "$ARG" ] && [[ ":$PATH:" != *":$ARG:"* ]]; then
+            PATH="${PATH:+"$PATH:"}$ARG"
+        fi
+    done
+}

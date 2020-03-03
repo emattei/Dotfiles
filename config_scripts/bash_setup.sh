@@ -8,3 +8,6 @@ ln -s $( readlink -f ../bash/.bashrc ) ${HOME}/.bashrc
 ln -s $( readlink -f ../bash/.bash_aliases ) ${HOME}/.bash_aliases
 ln -s $( readlink -f ../bash/.dir_colors.256dark ) ${HOME}/.dir_colors
 
+# Add the new scripts to path
+[! -d ${HOME}/.local/bin ] && mkdir ${HOME}/.local/bin
+ln -s $( readlink -f ../bin/* ) ~/.local/bin/

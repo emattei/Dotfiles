@@ -129,9 +129,9 @@ set scrolloff=3
 
 " undos configuration
 set undodir=~/.vim/undodir
-set undofile  " save undos
+set undofile          " save undos
 set undolevels=10000  " maximum number of changes that can be undone
-set undoreload=100000  " maximum number lines to save for undo on a buffer reload
+set undoreload=100000 " maximum number lines to save for undo on a buffer reload
 
 " easy split movement
 nnoremap <C-h> <C-w>h
@@ -143,6 +143,12 @@ nnoremap <C-l> <C-w>l
 set list
 set listchars=tab:▸\ ,trail:·,eol:¬,extends:→,precedes:←,nbsp:･
 set showbreak=↪\
+
+" Reindent file automatically and return to original line
+" The trick is done by the '=' operator; gg and G just specify from the
+" beginning to the end of the file
+" == reindent only the current line
+map <F7> gg=G<C-o><C-o>
 
 " Remap to move across buffers
 noremap <M-N> :bnext<CR>
