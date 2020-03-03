@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Set the default folder for configuration files
-export XDG_CONFIG_HOME="$HOME/.config"
-
 # Check if nvim folder exists; if not, create it.
 [! -d ${XDG_CONFIG_HOME}/nvim ] && mkdir -P ${XDG_CONFIG_HOME}/nvim
 

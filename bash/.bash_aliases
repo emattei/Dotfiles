@@ -22,6 +22,9 @@ alias l='ls -CF --group-directories-first'
 # call neovim with just 'v'
 alias v='nvim'
 
+# Average load at 1, 5 and 15 min fot tmux
+alias load='uptime | grep -oP [0-9]\\.[0-9]+ | tr "\n" " " | awk "{print}"'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #  sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'

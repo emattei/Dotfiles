@@ -20,19 +20,19 @@ let g:airline#extensions#tmuxline#enabled = 1
 let g:tmuxline_powerline_separators = 1
 " Configure tmux statusline
 let g:tmuxline_preset = {
-      \'a'    : '#S',
+      \'a'    : '#h #S',
       \'c'    : ['#(whoami)'],
       \'win'  : ['#I', '#W'],
       \'cwin' : ['#I', '#W'],
       \'x'    : '#(date)',
-      \'y'    : ['%R', '%a', '%Y'],
+      \'y'    : ['%R'],
       \'z'    : '#H'}
 
 " Tabline configuration
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
+"let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 
 " Use powerline fonts (install fonts-powerline package)
