@@ -24,7 +24,7 @@ let g:tmuxline_preset = {
       \'c'    : ['#(whoami)'],
       \'win'  : ['#I', '#W'],
       \'cwin' : ['#I', '#W'],
-      \'x'    : '#(date)',
+      \'x'    : '#(tmux-mem-cpu-load --colors --powerline-right --interval 2 -a 0)',
       \'y'    : ['%R'],
       \'z'    : '#H'}
 

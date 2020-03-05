@@ -1,0 +1,46 @@
+# These scripts needs to be sourced not run
+
+# Capture error code from script
+EC(){
+    echo -e '\e[1;33m'code $?'\e[m\n'
+}
+trap EC ERR
+
+# Change and ls in directory
+cl() {
+	local dir="$1"
+	local dir="${dir:=$HOME}"
+	if [[ -d "$dir" ]]; then
+		cd "$dir" >/dev/null; ls
+	else
+		echo "bash: cl: $dir: Directory not found"
+	fi
+}
+
+# Simple calculator
+calc() {
+    echo "scale=3;$@" | bc -l
+}
+
+# IP info
+ipif() { 
+    if grep -P "(([1-9]\d{0,2})\.){3}(?2)" <<< "$1"; then
+	 curl ipinfo.io/"$1"
+    else
+	ipawk=($(host "$1" | awk '/address/ { print $NF }'))
+	curl ipinfo.io/${ipawk[1]}
+    fi
+    echo
+}
+
+# Menu driven autocompletion, it need the https://github.com/kokoko3k/kingbash-gb
+# to be installed
+# function kingbash.fn() {
+    #echo -n "KingBash> $READLINE_LINE" #Where "KingBash> " looks best if it resembles your PS1, at least in length.
+    #OUTPUT=$(/usr/bin/kingbash "$(compgen -ab -A function)")
+    #READLINE_POINT=$(echo "$OUTPUT" | tail -n 1)
+    #READLINE_LINE=$(echo "$OUTPUT" | head -n -1)
+    #echo -ne "\r\e[2K"
+#}
+#bind -x '"\t":kingbash.fn'
+

@@ -21,3 +21,10 @@ I should consider [clonezilla](https://clonezilla.org/) to clone the partition i
 
 [inxi](https://github.com/smxi/inxi) gives a complete report of the machine configuration and the system in general.\
 Unfortunately is 100% perl.
+
+### Change the default folders in linux
+
+To change the default folders in linux (Documents, Downloads, Pictures, etc.) change the file:
+
+`${HOME}/.config/users-dirs.dirs`
+

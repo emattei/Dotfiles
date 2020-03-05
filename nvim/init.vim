@@ -40,20 +40,20 @@ if dein#load_state('~/.local/share/dein')
                 \ 'on_map' : { 'n' : ['<C-n>', '<C-p>'], 'x' : '<C-n>'}})
   " Align text in columns
     call dein#add('godlygeek/tabular', {
-                \'on_cmd' : [ 'Tab', 'Tabularize' ] , 'augroup' : 'tabular' })
+                \ 'on_cmd' : [ 'Tab', 'Tabularize' ] , 'augroup' : 'tabular' })
   " Swap two words or two line in one motion
     call dein#add('tommcdo/vim-exchange', {
-                \'on_map' : {'n' : 'cx', 'x' : 'X' }})
+                \ 'on_map' : {'n' : 'cx', 'x' : 'X' }})
   " Repeat command. It is a dependency of the vim-surround plugin
     call dein#add('tpope/vim-repeat', {
-                \'on_map' : '.'}) 
+                \ 'on_map' : '.'}) 
   " Add, remove or change parenthesis
     call dein#add('tpope/vim-surround', {
-                \'on_map': {'n' : ['cs', 'ds', 'ys'], 'x' : 'S'},
-                \'depends' : 'vim-repeat'})
+                \ 'on_map': {'n' : ['cs', 'ds', 'ys'], 'x' : 'S'},
+                \ 'depends' : 'vim-repeat'})
   " Move chunks of text around
     call dein#add('zirrostig/vim-schlepp', {
-                \'on_map' :  ['<Plug>SchleppDown',
+                \ 'on_map' : ['<Plug>SchleppDown',
                 \             '<Plug>SchleppUp',
                 \             '<Plug>SchleppLeft', 
                 \             '<Plug>SchleppRight']}) 
@@ -120,6 +120,7 @@ nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 
 " map leader
 let g:mapleader = ','
+let g:maplocalleader = '\\'
 
 " Toggle spelling
 nnoremap <leader>s : set invspell<CR>

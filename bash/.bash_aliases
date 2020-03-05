@@ -20,6 +20,7 @@ alias l='ls -CF --group-directories-first'
 
 # call neovim with just 'v'
 alias v='nvim'
+alias vimdiff='nvim -d'
 
 alias cp='cp -i'     # Ask before overwrite
 alias df='df -h'     # Human readable sizes
