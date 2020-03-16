@@ -11,3 +11,24 @@ ln -s $( readlink -f ../bash/.dir_colors.256dark ) ${HOME}/.dir_colors
 # Add the new scripts to path
 [ ! -d ${HOME}/.local/bin ] && mkdir ${HOME}/.local/bin
 ln -s $( readlink -f ../bin/* ) ~/.local/bin/
+
+mkdir ~/desktop
+rmdir ~/Desktop
+mkdir ~/internet
+rmdir ~/Downloads
+mkdir ~/templates
+mv ~/Templated/* ~/templates
+rmdir ~/Templates
+mkdir ~/public
+rmdir ~/Public
+mkdir ~/documents
+rmdir ~/Documents
+mkdir ~/music
+rmdir ~/Music
+mkdir ~/pictures
+rmdir ~/Pictures
+mkdir ~/videos
+rmdir ~/Videos
+
+[ -e ${HOME}/.config/user-dirs.dirs ] && mv ${HOME}/.config/user-dirs.dirs{,.bak}
+mv ../bash/user-dirs.dirs ${HOME}/.config/user-dirs.dirs

@@ -25,6 +25,7 @@ alias vimdiff='nvim -d'
 alias cp='cp -i'     # Ask before overwrite
 alias df='df -h'     # Human readable sizes
 alias free='free -m' # Show free memory in MB
+alias o='xdg-open'
 
 # Shortcut to go up two and three folders
 alias ..='cd ../'
