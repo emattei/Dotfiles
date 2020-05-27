@@ -31,6 +31,8 @@ if dein#load_state('~/.local/share/dein')
   " View csv in vim
     call dein#add('chrisbra/csv.vim', {
                 \ 'on_ft' : ['csv', 'tsv']})
+    call dein#add('mrk21/yaml-vim', {
+                \ 'on_ft' : ['yml','yaml']})
   " View git information
     call dein#add('airblade/vim-gitgutter')
   " Comment multiple lines

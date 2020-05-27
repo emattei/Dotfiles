@@ -113,4 +113,7 @@ export VISUAL='nvim' # system editor
 export XDG_CACHE_HOME=${HOME}/.cache
 export XDG_CONFIG_HOME=${HOME}/.config
 
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=${HOME}/go
+
 source ./extra_utils
