@@ -1,0 +1,14 @@
+# Install Vimix theme
+# GTK theme
+git clone https://github.com/vinceliuice/vimix-gtk-themes.git
+cd vimix-gtk-themes
+./install.sh -c dark -s laptop -t ruby
+# Icons
+git clone https://github.com/vinceliuice/vimix-icon-theme.git
+cd vimix-icon-theme
+./install.sh
+
+ls /usr/share/vimNN/colors
+
+# Show desktop icon
+git clone https://github.com/amivaleo/Show-Desktop-Button.git ~/.local/share/gnome-shell/extensions/show-desktop-button@amivaleo

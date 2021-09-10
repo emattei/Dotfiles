@@ -16,17 +16,17 @@ let g:airline_skip_empty_sections = 1
 let g:airline_detect_paste = 1
 
 " Apply colors to tmux as well
-let g:airline#extensions#tmuxline#enabled = 1
-let g:tmuxline_powerline_separators = 1
+"let g:airline#extensions#tmuxline#enabled = 1
+"let g:tmuxline_powerline_separators = 1
 " Configure tmux statusline
-let g:tmuxline_preset = {
-      \'a'    : '#h #S',
-      \'c'    : ['#(whoami)'],
-      \'win'  : ['#I', '#W'],
-      \'cwin' : ['#I', '#W'],
-      \'x'    : '#(tmux-mem-cpu-load --colors --powerline-right --interval 2 -a 0)',
-      \'y'    : ['%R'],
-      \'z'    : '#H'}
+"let g:tmuxline_preset = {
+"      \'a'    : '#h #S',
+"      \'c'    : ['#(whoami)'],
+"      \'win'  : ['#I', '#W'],
+"      \'cwin' : ['#I', '#W'],
+"      \'x'    : '#(tmux-mem-cpu-load --colors --powerline-right --interval 2 -a 0)',
+"      \'y'    : ['%R'],
+"      \'z'    : '#H'}
 
 " Tabline configuration
 let g:airline#extensions#tabline#enabled = 1

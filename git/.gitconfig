@@ -1,3 +1,9 @@
+[user]
+	name = Eugenio Mattei
+	email = emattei.phd@gmail.com
+[core]
+	editor = vim
+
 # From http://blog.kfish.org/2010/04/git-lola.html
 [alias]
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit

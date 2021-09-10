@@ -25,7 +25,7 @@ if dein#load_state('~/.local/share/dein')
   " Show the buffers in vim
     call dein#add('bling/vim-bufferline')
   " Add support for tmux
-    call dein#add('edkolev/tmuxline.vim')
+  " call dein#add('edkolev/tmuxline.vim')
   " Show indent lines
     call dein#add('Yggdroot/indentLine')
   " View csv in vim
@@ -59,13 +59,11 @@ if dein#load_state('~/.local/share/dein')
                 \             '<Plug>SchleppUp',
                 \             '<Plug>SchleppLeft', 
                 \             '<Plug>SchleppRight']}) 
-
   " Show preview for markdown files
     call dein#add('iamcco/markdown-preview.nvim', {
     \ 'on_ft': ['markdown', 'pandoc.markdown', 'rmd', 'md'],
     \ 'build': 'sh -c "cd app & yarn install"'
     \ })
-
 
   " Required:
     call dein#end()
@@ -83,7 +81,7 @@ so ~/.config/nvim/markdown_profile.vim
 " Load NEOSOLARIZED configuration
 so ~/.config/nvim/neosolarized_profile.vim
 " Load AIRLINE configuration
-so ~/.config/nvim/airline_profile.vim
+ so ~/.config/nvim/airline_profile.vim
 " Load INDENTLINE configuration
 so ~/.config/nvim/indentLine_profile.vim
 " Load TABULARIZE configuration
@@ -108,7 +106,7 @@ set mouse=v                 " middle-click paste with mouse
 set hlsearch                " highlight search results
 set autoindent              " indent new line as the line just typed
 set wildmode=longest,list   " get bash-like tab completions
-set cc=80                   " set an 80 column border for good coding style
+set cc=120                   " set an 80 column border for good coding style
 
 set number relativenumber   " add line numbers
 :augroup numbertoggle
@@ -123,6 +121,8 @@ nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 " map leader
 let g:mapleader = ','
 let g:maplocalleader = '\\'
+
+let g:python3_host_prog = "/usr/bin/python3"
 
 " Toggle spelling
 nnoremap <leader>s : set invspell<CR>
@@ -156,3 +156,7 @@ map <F7> gg=G<C-o><C-o>
 " Remap to move across buffers
 noremap <M-N> :bnext<CR>
 noremap <M-P> :bprev<CR>
+
+" Set the WDL filetype
+au BufRead,BufNewFile *.wdl set filetype=wdl
+au FileType wdl so ~/git/Dotfiles/nvim/wdl.vim
