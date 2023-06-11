@@ -1,4 +1,5 @@
 # These scripts needs to be sourced not run
+# https://wiki.archlinux.org/title/Bash/Functions
 
 # Capture error code from script
 EC(){
@@ -23,6 +24,7 @@ calc() {
 }
 
 # IP info
+# Takes in input either an IP address or a URL
 ipif() { 
     if grep -P "(([1-9]\d{0,2})\.){3}(?2)" <<< "$1"; then
 	 curl ipinfo.io/"$1"

@@ -10,8 +10,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias vdir='vdir --color=always'
 
     alias grep='grep --color=always'
-    alias fgrep='fgrep --color=always'
-    alias egrep='egrep --color=always'
+    alias fgrep='grep -F --color=always'
+    alias egrep='grep -E --color=always'
 fi
 
 alias ll='ls -AhlF --group-directories-first'
@@ -31,7 +31,7 @@ alias o='xdg-open'
 alias ..='cd ../'
 alias ...='cd ../../'
 
-# Average load at 1, 5 and 15 min fot tmux
+# Average load at 1, 5 and 15 min for tmux
 alias load='uptime | grep --color=no -oP [0-9]\\.[0-9]+ | tr "\n" " " | awk "{print}"'
 
 # Add an "alert" alias for long running commands.  Use like so:

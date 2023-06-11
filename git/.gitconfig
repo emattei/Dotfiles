@@ -1,6 +1,6 @@
 [user]
 	name = Eugenio Mattei
-	email = emattei.phd@gmail.com
+	email = emattei@users.noreply.github.com
 [core]
 	editor = vim
 
@@ -15,3 +15,5 @@
 	diff= auto
 	interactive= auto
 	status= auto
+[init]
+	defaultBranch = main
