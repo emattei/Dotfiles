@@ -1,3 +1,10 @@
+# Notes about setting up
+tlp is the battery management tool
+For bluetooth
+`sudo apt install bluez blueman`
+To complete connection successfully. pipewire replaces pulseaudio.
+`sudo apt install pipewire pipewire-pulse pipewire-jack pipewire-alsa pipewire-audio`
+
 # Extra Hacks
 
 Collection of hacks that might be useful in the future but not configured in these dotfiles.
