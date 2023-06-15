@@ -1,3 +1,16 @@
+#ToDo:
+- Configure [Starship](https://starship.rs/config/#prompt)
+- Create docs
+
+### Nerd fonts
+[website](https://www.nerdfonts.com/#features)
+
+### Custom bash completion
+[Guide](https://www.cyberciti.biz/faq/add-bash-auto-completion-in-ubuntu-linux/)
+
+### Color palette
+[Tokyo nights](https://github.com/enkia/tokyo-night-vscode-theme)
+
 # Notes about setting up
 tlp is the battery management tool
 For bluetooth
