@@ -2,6 +2,15 @@
 - Configure [Starship](https://starship.rs/config/#prompt)
 - Create docs
 
+### top but for containers
+[ctop](https://github.com/bcicen/ctop)
+
+### gotop: a more compact htop with plots
+[gotop](https://github.com/xxxserxxx/gotop/tree/v4.2.0)
+
+### yop: gotop but in rust and with support for colorschemes
+[ytop](https://github.com/cjbassi/ytop)
+
 ### Nerd fonts
 [website](https://www.nerdfonts.com/#features)
 
